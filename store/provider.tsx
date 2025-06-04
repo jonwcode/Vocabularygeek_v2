@@ -1,12 +1,17 @@
 "use client";
-import React, { useState, ReactNode, useEffect } from "react";
+import React, { useState, ReactNode, useEffect, useRef } from "react";
 import useMedia from "@/hooks/useMedia";
+import InitLoads from "@/initLoads";
 import Loading from "@/components/loading";
 import Context from "@/store/context";
 import { type appReady, type deviceInfo } from "@/types/store";
 
 export default function Provider({ children }: { children: ReactNode }) {
-  const [appReady, setAppReady] = useState<appReady>({ loading: true });
+  const [appReady, setAppReady] = useState<appReady>({
+    theme: false,
+    deviceName: false,
+    loading: true,
+  });
   const [deviceInfo, setDeviceInfo] = useState<deviceInfo>(null);
   const [loginStatus, setLoginStatus] = useState<boolean | null>(null);
 
@@ -20,11 +25,17 @@ export default function Provider({ children }: { children: ReactNode }) {
   });
 
   useEffect(() => {
-    console.log("Going here", mediaQueryDevice);
     setDeviceInfo((prev) => {
       return { ...prev, deviceName: mediaQueryDevice };
     });
   }, [mediaQueryDevice]);
+
+  useEffect(() => {
+    if (appReady.theme) {
+      setAppReady((prev) => ({ ...prev, loading: false }));
+      console.log("Goes here");
+    }
+  }, [appReady.theme]);
 
   return (
     <div>
@@ -37,7 +48,14 @@ export default function Provider({ children }: { children: ReactNode }) {
           setAppReady,
         }}
       >
-        {appReady ? children : <Loading />}
+        {!appReady.loading ? (
+          children
+        ) : (
+          <React.Fragment>
+            <InitLoads />
+            <Loading />
+          </React.Fragment>
+        )}
       </Context.Provider>
     </div>
   );

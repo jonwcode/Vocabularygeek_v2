@@ -1,0 +1,16 @@
+{
+  "folder-color.pathColors": [
+    {
+      "folderPath": "vocabularygeek_v2/css/",
+      "color": "foldercolorizer.color_cc66cc"
+    },
+    {
+      "folderPath": "vocabularygeek_v2/components/",
+      "color": "foldercolorizer.color_009999"
+    },
+    {
+      "folderPath": "vocabularygeek_v2/css/components/",
+      "color": "foldercolorizer.color_cc66cc"
+    }
+  ]
+}

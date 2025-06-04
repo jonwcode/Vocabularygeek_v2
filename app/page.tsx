@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useContext } from "react";
 import Context from "@/store/context";
-import Header from "@/components/headers";
+import Header from "@/components/header";
+import { Wrapper } from "@/common";
 
 export default function Home() {
   const ctx = useContext(Context);
@@ -9,5 +10,9 @@ export default function Home() {
   useEffect(() => {
     console.log(ctx.deviceInfo?.deviceName);
   }, [ctx.deviceInfo]);
-  return <Header />;
+  return (
+    <Wrapper>
+      <Header />
+    </Wrapper>
+  );
 }

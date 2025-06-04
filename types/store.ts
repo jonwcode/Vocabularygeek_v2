@@ -29,6 +29,8 @@ export type osName =
 
 export type appReady = {
   loading: boolean;
+  deviceName: boolean;
+  theme: boolean;
 };
 
 export type appReadyDispatch = React.Dispatch<React.SetStateAction<appReady>>;

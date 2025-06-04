@@ -24,6 +24,8 @@ const Context = createContext<contextType>({
   setAppReady: () => {},
   appReady: {
     loading: false,
+    theme: false,
+    deviceName: false,
   },
 });
 
