@@ -1,0 +1,7 @@
+.header a {
+  color: rgb(182, 188, 16);
+}
+.leftHeaderLinks a,
+.rightHeaderLinks a {
+  margin-left: 20px;
+}
