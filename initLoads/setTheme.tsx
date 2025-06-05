@@ -9,7 +9,7 @@ export default function SetTheme() {
     // Check for the user prefer theme
     // First check to see if we have one already set
     // in the storage
-    const userTheme = window.localStorage.getItem("theme");
+    const userTheme = localStorage.getItem("theme");
     // Grab the system prefer theme
     const systemPreferTheme = window.matchMedia(
       "(prefers-color-scheme: dark)"
@@ -18,6 +18,8 @@ export default function SetTheme() {
     const theme = userTheme || (systemPreferTheme ? "dark" : "light");
     // Set our Theme
     document.documentElement.setAttribute("data-theme", theme);
+
+    localStorage.setItem("theme", theme);
 
     ctx.setAppReady((prev) => ({ ...prev, theme: true }));
   }, []);

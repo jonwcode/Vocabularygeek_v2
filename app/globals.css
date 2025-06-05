@@ -1,6 +1,11 @@
 @import url("./dark-theme.css");
 @import url("./light-theme.css");
 
+:root {
+  --shadow-sm: 0 0px 6px rgba(0, 0, 0, 0.411);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.511);
+}
+
 @font-face {
   font-family: "WDXLLubrifontTC";
   src: url("/assets/fonts/WDXLLubrifontTC-Regular.woff2") format("woff2"),
@@ -35,9 +40,14 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: var(--green-color-400);
+  text-decoration: none;
+}
+
 body {
   color: var(--primary-color);
-  background: var(--body-backgroundColor);
+  background: var(--primary-background);
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -53,9 +63,4 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }

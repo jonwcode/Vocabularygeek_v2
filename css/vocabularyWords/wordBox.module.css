@@ -1,16 +1,18 @@
 .box {
-  background: #111111;
+  background: var(--secondary-background);
   width: 370px;
   max-width: 350px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: var(--shadow-sm);
 }
 .box:hover {
-  box-shadow: 0px 0px 16px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 200ms ease-in-out;
 }
 .word {
-  border-bottom: 1px solid #1b1a1a;
+  border-bottom: 1px solid var(--primary-hrLineColor);
   width: 100%;
   display: inline-block;
   position: relative;
@@ -25,9 +27,10 @@
 
 .shortDes {
   font-size: 1rem;
-  font-weight: 350;
+  font-weight: 400;
   font-family: Inter;
-  color: var(--light-color);
+  color: var(--secondary-color);
+  font-family: Inter;
 }
 
 [data-type="verb"].word::after {

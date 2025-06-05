@@ -9,9 +9,11 @@ export default function Headers() {
     <React.Fragment>
       <Flex className={css.header} tag="header">
         {/* Left Header Starts */}
-        <Flex style={{ width: "70%" }} border>
+        <Flex style={{ width: "70%" }}>
           <Flex style={{ padding: 15 }}>
-            <Logo />
+            <Link href="/">
+              <Logo />
+            </Link>
             <Flex
               ml={20}
               middle

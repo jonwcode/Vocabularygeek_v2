@@ -1,5 +1,16 @@
 [data-theme="dark"] {
-  --body-backgroundColor: #171717;
+  --primary-background: #1b1b1b;
+  --secondary-background: #141414;
+  --body-background: #1b1b1b;
   --primary-color: #ffffff;
-  --light-color: #ababab;
+  --secondary-color: #a3a3a3;
+
+  --green-color-100: #21d375;
+  --green-color-200: #6bbf59;
+  --green-color-300: #08a045;
+  --green-color-400: #0b6e4f;
+  --green-color-500: #073b3a;
+
+  --logo-strokeColor: rgb(26 26 26);
+  --logo-fillColor: #636363;
 }

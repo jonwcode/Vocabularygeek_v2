@@ -5,6 +5,7 @@ export default function Content({ children }: { children?: React.ReactNode }) {
     <Box
       style={{
         marginTop: 50,
+        paddingBottom: 10,
       }}
     >
       {children}
