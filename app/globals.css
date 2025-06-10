@@ -1,9 +1,9 @@
 @import url("./dark-theme.css");
 @import url("./light-theme.css");
 
-:root {
-  --shadow-sm: 0 0px 6px rgba(0, 0, 0, 0.411);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.511);
+hr {
+  background: rgba(210, 210, 210, 0.052);
+  border-color: rgb(158, 91, 91);
 }
 
 @font-face {
@@ -38,11 +38,19 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 a {
   color: var(--green-color-400);
   text-decoration: none;
+}
+
+html {
+  background: var(--primary-background);
+  width: 100%;
+  height: 100%;
 }
 
 body {

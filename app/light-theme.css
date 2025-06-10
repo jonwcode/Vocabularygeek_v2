@@ -1,25 +1,30 @@
 [data-theme="light"] {
-  --body-backgroundColor: #1d2e28;
-  --shadow-sm: 0 0px 6px rgba(0, 0, 0, 0.123);
-  --shadow-md: 0 0px 12px rgba(0, 0, 0, 0.091);
-  --logo-strokeColor: rgb(26 26 26);
-  --logo-fillColor: #636363;
+  --shadow-sm: 0 0px 6px var(--green-color-100);
+  --shadow-md: 0 0px 12px var(--green-color-100);
 
   --primary-background: #fbfbfb;
   --secondary-background: #f4f4f4;
   --body-background: #1b1b1b;
   --primary-color: #000000;
+
+  --borderColor: #efeeee;
+  --secondary-borderColor: #dedede;
+
+  /*  Not included in the dark theme */
   --secondary-color: #000000;
   --primary-linkColor: #335d46;
+  /* End */
 
-  --green-color-100: #21d375;
+  --green-color-100: #c3d5cb;
   --green-color-200: #6bbf59;
   --green-color-300: #76e276;
   --green-color-400: #0b6e4f;
   --green-color-500: #073b3a;
 
+  --lite-color-100: #eaeaea;
+  --lite-color-200: #acacac;
+  --lite-color-300: #959595;
+
   --logo-strokeColor: rgb(214, 214, 214);
   --logo-fillColor: #7a7a7a;
-
-  --primary-hrLineColor: #d5d5d5;
 }
