@@ -4,7 +4,21 @@ import css from "@/css/components/a-z.module.css";
 
 export default function AZ() {
   return (
-    <Flex middle className={css.letterContainer}>
+    <Flex middle className={css.letterContainer} style={{ tablet: { width: '95%'}, flexWrap: "wrap", margin: 'auto'}}>
+        <Flex m={5}>
+                  <Box
+                    style={{
+                      color: "var(--lite-color-100)",
+                      fontSize: "3rem",
+                      textShadow: "1px 0px var(--lite-color-200)",
+                      paddingLeft: 10,
+                      marginBottom: 20,
+                    }}
+                  >
+                    A-Z
+                  </Box>
+      </Flex>
+      <Flex mt={40}>
       <Flex>
         <Link href="/vocabularyWords/a">A</Link>
       </Flex>
@@ -82,6 +96,7 @@ export default function AZ() {
       </Flex>
       <Flex>
         <Link href="/vocabuarlyWords/z">Z</Link>
+      </Flex>
       </Flex>
     </Flex>
   );

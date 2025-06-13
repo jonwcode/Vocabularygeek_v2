@@ -28,20 +28,9 @@ export default async function Page() {
         <Header />
         <Content>
           <Flex column>
-            <Box
-              style={{
-                color: "var(--lite-color-100)",
-                fontSize: "3rem",
-                textShadow: "1px 0px var(--lite-color-200)",
-                paddingLeft: 10,
-                marginBottom: 20,
-              }}
-            >
-              A-Z
-            </Box>
             <AZ />
             <HrLine mb={40} />
-            <Box className={css.wordContainer}>
+            <Box className={css.wordContainer} style={{ "--per-column": 3, tablet: { "--per-column": 2}, mobile: { "--per-column": 1 }}}>
             {res.map((vocabWord: vocabWordType, i: number) => (
             <WordBox
             key={vocabWord.word || i} // Preferably use a unique value like vocabWord.word
