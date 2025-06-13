@@ -5,7 +5,7 @@ import css from "@/css/vocabularyWords/wordBox.module.css";
 
 interface WordBoxProps {
   word: string;
-  type: string;
+  type: number;
   description: string;
 }
 

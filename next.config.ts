@@ -10,4 +10,14 @@ const nextConfig: NextConfig = {
   },
 };
 
+// Rewrites must be exported separately
+export async function rewrites() {
+  return [
+    {
+      source: '/api/:path*',
+      destination: 'https://api.i-vocab.com/:path*',
+    },
+  ];
+}
+
 export default nextConfig;

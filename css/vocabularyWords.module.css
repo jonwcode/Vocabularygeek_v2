@@ -1,0 +1,7 @@
+.wordContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* max 4 columns */
+  gap: 2rem;
+  align-items: center;
+  margin: auto;
+}
