@@ -1,5 +1,5 @@
 .overlay {
-  background: rgba(243, 243, 243, 0.04);
+  background: rgba(16, 20, 25, 0.489);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -10,10 +10,20 @@
   width: 400px;
   height: 200px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--secondary-background);
   box-shadow: var(--shadow-md);
-  transition: top 1s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+.slideBox {
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity position;
+  transition-timing-function: ease;
+  transition-duration: 800ms;
+  transform-origin: bottom;
 }

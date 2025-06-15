@@ -37,7 +37,11 @@ export default function WordBox({ vocabWord }: WordBoxProps) {
         </Box>
       </Flex>
       {showWordPopup && (
-        <WordPopup setShowWordPopup={setShowWordPopup} vocabWord={vocabWord} />
+        <WordPopup
+          showWordPopup={showWordPopup}
+          setShowWordPopup={setShowWordPopup}
+          vocabWord={vocabWord}
+        />
       )}
     </React.Fragment>
   );
