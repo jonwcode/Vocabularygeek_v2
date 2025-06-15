@@ -3,7 +3,8 @@ export default function HrLine({ mt, mb }: { mb?: number; mt?: number }) {
   return (
     <Box
       style={{
-        width: "100%",
+        margin: 'auto',
+        width: "95%",
         height: "2px",
         background: "var(--borderColor)",
         borderBottom: "1px solid var(--secondary-borderColor)",

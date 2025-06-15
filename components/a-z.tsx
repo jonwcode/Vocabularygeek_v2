@@ -2,100 +2,104 @@ import Link from "next/link";
 import { Box, Flex } from "@/common";
 import css from "@/css/components/a-z.module.css";
 
-export default function AZ() {
+export default function AZ({currLetter}: { currLetter?: string}) {
   return (
-    <Flex middle className={css.letterContainer} style={{ tablet: { width: '95%'}, flexWrap: "wrap", margin: 'auto'}}>
-        <Flex m={5}>
-                  <Box
+    <Flex column middle className={css.letterContainer} style={{ justifyContent: 'flex-start', tablet: { width: '95%'}, flexWrap: "wrap", margin: 'auto'}}>
+        <Flex style={{ width: '100%', margin: 'auto'}}>
+                  <Flex
+                  left
                     style={{
+                      height: 'max-content',
+                      width: '95%',
                       color: "var(--lite-color-100)",
                       fontSize: "3rem",
                       textShadow: "1px 0px var(--lite-color-200)",
-                      paddingLeft: 10,
+                      paddingLeft: 0,
                       marginBottom: 20,
+                      textTransform: 'uppercase',
                     }}
                   >
-                    A-Z
-                  </Box>
+                    {!currLetter ? "A-Z" : <Box style={{ color: 'var(--primary-color)'}}>{currLetter}</Box>}
+                  </Flex>
       </Flex>
-      <Flex mt={40}>
+      <Flex mt={40} style={{ flexWrap: 'wrap', height: 'max-content'}}>
       <Flex>
         <Link href="/vocabularyWords/a">A</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/b">B</Link>
+        <Link href="/vocabularyWords/b">B</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/c">C</Link>
+        <Link href="/vocabularyWords/c">C</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/d">D</Link>
+        <Link href="/vocabularyWords/d">D</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/e">E</Link>
+        <Link href="/vocabularyWords/e">E</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/f">F</Link>
+        <Link href="/vocabularyWords/f">F</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/g">G</Link>
+        <Link href="/vocabularyWords/g">G</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/h">H</Link>
+        <Link href="/vocabularyWords/h">H</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/i">I</Link>
+        <Link href="/vocabularyWords/i">I</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/j">J</Link>
+        <Link href="/vocabularyWords/j">J</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/k">K</Link>
+        <Link href="/vocabularyWords/k">K</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/l">L</Link>
+        <Link href="/vocabularyWords/l">L</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/m">M</Link>
+        <Link href="/vocabularyWords/m">M</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/n">N</Link>
+        <Link href="/vocabularyWords/n">N</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/o">O</Link>
+        <Link href="/vocabularyWords/o">O</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/p">P</Link>
+        <Link href="/vocabularyWords/p">P</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/q">Q</Link>
+        <Link href="/vocabularyWords/q">Q</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/r">R</Link>
+        <Link href="/vocabularyWords/r">R</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/s">S</Link>
+        <Link href="/vocabularyWords/s">S</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/t">T</Link>
+        <Link href="/vocabularyWords/t">T</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/u">U</Link>
+        <Link href="/vocabularyWords/u">U</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/v">V</Link>
+        <Link href="/vocabularyWords/v">V</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/w">W</Link>
+        <Link href="/vocabularyWords/w">W</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/x">X</Link>
+        <Link href="/vocabularyWords/x">X</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/y">Y</Link>
+        <Link href="/vocabularyWords/y">Y</Link>
       </Flex>
       <Flex>
-        <Link href="/vocabuarlyWords/z">Z</Link>
+        <Link href="/vocabularyWords/z">Z</Link>
       </Flex>
       </Flex>
     </Flex>
