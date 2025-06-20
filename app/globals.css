@@ -1,5 +1,5 @@
-@import url('/theme/dark-theme.css');
-@import url('/theme/light-theme.css');
+@import url('./theme/dark-theme.css');
+@import url('./theme/light-theme.css');
 
 hr {
   background: rgba(210, 210, 210, 0.052);

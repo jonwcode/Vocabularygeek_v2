@@ -52,7 +52,7 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
               onMouseEnter={() => setShowLetters(true)}
               className={css.azButton}
             >
-              <Box pr={10}>Sort by: A - Z</Box>{' '}
+              <Box pr={10}> {!currLetter ? <Box style={{ width: '45px'}}>A - Z</Box> : <Box style={{ textTransform: 'uppercase', color: 'var(--primary-color)'}}>{currLetter}</Box> }</Box>{' '}
               <ArrowAZ
                 style={{
                   color: 'var(--green-color-400)',

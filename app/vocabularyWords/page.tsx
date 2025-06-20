@@ -20,9 +20,9 @@ export default async function Page() {
       <Wrapper>
         <Header />
         <Content>
-          <Flex column mt={50}>
-            <AZ />
+                     <AZ />
             <HrLine mb={40} />
+          <Flex border column mt={50}>
             <Box
               className={css.wordContainer}
               style={{
