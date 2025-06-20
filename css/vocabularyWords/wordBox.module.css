@@ -3,10 +3,10 @@
   width: 370px;
   max-width: 350px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
 }
+
 .box:hover {
   box-shadow: var(--shadow-md);
   transition: box-shadow 200ms ease-in-out;
@@ -33,53 +33,65 @@
   font-family: Inter;
 }
 
-[data-type="4"].word::after {
-  content: "Adjective";
-  background: linear-gradient(90deg, rgb(104, 43, 126) 0%, rgb(115, 59, 147) 50%);
+[data-type='4'].word::after {
+  content: 'Adjective';
+  background: linear-gradient(
+    90deg,
+    rgb(104, 43, 126) 0%,
+    rgb(115, 59, 147) 50%
+  );
   padding: 1px 7px 1px 7px;
   border-radius: 3px;
   font-size: 12px;
   color: #cccccc;
   position: absolute;
   right: 0;
-  font-family: "WDXLLubrifontTC", sans-serif;
+  font-family: 'WDXLLubrifontTC', sans-serif;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
 }
 
-[data-type="4"].word::after {
-  content: "Adverb";
-  background: linear-gradient(90deg, rgb(43, 126, 51) 0%, rgb(118, 147, 59) 50%);
+[data-type='4'].word::after {
+  content: 'Adverb';
+  background: linear-gradient(
+    90deg,
+    rgb(43, 126, 51) 0%,
+    rgb(118, 147, 59) 50%
+  );
   padding: 1px 7px 1px 7px;
   border-radius: 3px;
   font-size: 12px;
   color: #cccccc;
   position: absolute;
   right: 0;
-  font-family: "WDXLLubrifontTC", sans-serif;
+  font-family: 'WDXLLubrifontTC', sans-serif;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
 }
 
-[data-type="3"].word::after {
-  content: "Adjective";
-  background: linear-gradient(90deg, rgb(104, 43, 126) 0%, rgb(142, 60, 189) 50%);
+[data-type='3'].word::after {
+  content: 'Adjective';
+  background: linear-gradient(
+    90deg,
+    rgb(104, 43, 126) 0%,
+    rgb(142, 60, 189) 50%
+  );
   padding: 1px 7px 1px 7px;
   border-radius: 3px;
   font-size: 12px;
   color: #cccccc;
   position: absolute;
   right: 0;
-  font-family: "WDXLLubrifontTC", sans-serif;
+  font-family: 'WDXLLubrifontTC', sans-serif;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
 }
 
-[data-type="2"].word::after {
-  content: "Verb";
+[data-type='2'].word::after {
+  content: 'Verb';
   background: linear-gradient(90deg, rgb(126, 45, 43) 0%, rgb(167, 41, 41) 50%);
   padding: 1px 7px 1px 7px;
   border-radius: 3px;
@@ -87,14 +99,14 @@
   color: #cccccc;
   position: absolute;
   right: 0;
-  font-family: "WDXLLubrifontTC", sans-serif;
+  font-family: 'WDXLLubrifontTC', sans-serif;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
 }
 
-[data-type="1"].word::after {
-  content: "Noun";
+[data-type='1'].word::after {
+  content: 'Noun';
   background: linear-gradient(90deg, rgb(43, 72, 126) 0%, rgb(47, 52, 183) 50%);
   padding: 1px 7px 1px 7px;
   border-radius: 3px;
@@ -102,7 +114,7 @@
   color: #cccccc;
   position: absolute;
   right: 0;
-  font-family: "WDXLLubrifontTC", sans-serif;
+  font-family: 'WDXLLubrifontTC', sans-serif;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;

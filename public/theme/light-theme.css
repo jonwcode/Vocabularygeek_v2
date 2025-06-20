@@ -1,6 +1,8 @@
-[data-theme="light"] {
+[data-theme='light'] {
   --shadow-sm: 0 0px 6px var(--green-color-100);
   --shadow-md: 0 0px 12px var(--green-color-100);
+  --radius-md: 10px;
+  --radius-sm: 5px;
 
   --primary-background: #fbfbfb;
   --secondary-background: #f4f4f4;
@@ -9,6 +11,11 @@
 
   --borderColor: #efeeee;
   --secondary-borderColor: #dedede;
+  --button-backgroundColor: var(--green-color-400);
+  --button-padding-md: 10px;
+  --button-padding-sm: 5px;
+  --button-gradient-1: var(--secondary-background);
+  --button-gradient-2: #f7f7f7;
 
   /*  Not included in the dark theme */
   --secondary-color: #000000;
@@ -21,7 +28,7 @@
   --green-color-400: #0b6e4f;
   --green-color-500: #073b3a;
 
-  --lite-color-100: #eaeaea;
+  --lite-color-100: #282727;
   --lite-color-200: #acacac;
   --lite-color-300: #959595;
 

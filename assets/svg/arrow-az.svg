@@ -1,0 +1,13 @@
+<svg width="104" height="84" version="1.1" viewBox="0 0 27.517 22.225" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(.85039 0 0 .85039 2.0773 .53538)">
+  <text x="10.228919" y="9.2747602" fill="currentColor" font-family="'WDXL Lubrifont SC'" font-size="12.83px" stroke="currentColor" stroke-width="1.0692" xml:space="preserve"><tspan x="10.228919" y="9.2747602" stroke="currentColor" stroke-width="1.0692">A</tspan></text>
+  <text transform="scale(1.0374 .96392)" x="9.5875864" y="25.310972" fill="currentColor" font-family="'WDXL Lubrifont SC'" font-size="13.631px" stroke="currentColor" stroke-width="1.1359" xml:space="preserve"><tspan x="9.5875864" y="25.310972" stroke="currentColor" stroke-width="1.1359">Z</tspan></text>
+  <g transform="matrix(4.3248 0 0 4.041 -81.273 -26.043)">
+   <g transform="translate(.18717 .036421)">
+    <rect x="18.949" y="9.2904" width="5.6387" height=".34954" stroke="currentColor" stroke-width=".2396"/>
+    <text x="23.637724" y="10.6154" fill="currentColor" font-family="'WDXL Lubrifont SC'" font-size="3.175px" stroke="currentColor" stroke-width=".26458" xml:space="preserve"><tspan x="23.637724" y="10.6154" stroke="currentColor" stroke-width=".26458">&gt;</tspan></text>
+    <text x="18.114145" y="10.615399" fill="currentColor" font-family="'WDXL Lubrifont SC'" font-size="3.175px" stroke="currentColor" stroke-width=".26458" xml:space="preserve"><tspan x="18.114145" y="10.615399" stroke="currentColor" stroke-width=".26458">&lt;</tspan></text>
+   </g>
+  </g>
+ </g>
+</svg>

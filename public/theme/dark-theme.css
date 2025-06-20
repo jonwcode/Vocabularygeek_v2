@@ -1,6 +1,9 @@
-[data-theme="dark"] {
+[data-theme='dark'] {
   --shadow-sm: 0 0px 6px var(--green-color-500);
   --shadow-md: 0 0px 12px var(--green-color-500);
+  --radius-md: 10px;
+  --radius-sm: 5px;
+  --padding-md: 10px;
 
   --primary-color: #ffffff;
   --primary-linkColor: #335d46;
@@ -9,6 +12,11 @@
   --secondary-color: #a3a3a3;
   --borderColor: #0b0b11;
   --secondary-borderColor: rgb(22, 21, 33);
+  --button-backgroundColor: var(--green-color-400);
+  --button-padding-md: 10px;
+  --button-padding-sm: 5px;
+  --button-gradient-1: var(--secondary-background);
+  --button-gradient-2: #0b0b11;
 
   --green-color-100: #8ebaa3;
   --green-color-200: #6bbf59;

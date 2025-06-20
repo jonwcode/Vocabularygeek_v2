@@ -8,7 +8,7 @@ import UsePortal from "@/hooks/usePortal";
 type WordPopupType = {
   setShowWordPopup: React.Dispatch<React.SetStateAction<boolean>>;
   vocabWord: vocabWordType;
-  showWordPopup: () => {};
+  showWordPopup: boolean;
 };
 
 export default function WordPopup({
@@ -34,11 +34,27 @@ export default function WordPopup({
         onClick={() => setShowWordPopup((prev) => !prev)}
         className={css.overlay}
       />
-      <Flex className={boxClass} column>
-        <Box style={{ fontSize: "2rem", fontWeight: "bold" }}>
+      <Flex
+        style={{
+          width: "600px",
+          minHeight: "400px",
+          mobile: { width: "95%" },
+          tablet: { width: "95%" },
+        }}
+        className={boxClass}
+        column
+      >
+        <Box
+          className={css.word}
+          data-type={vocabWord.type}
+          style={{ fontSize: "2rem", fontWeight: "bold" }}
+        >
           {vocabWord.word}
         </Box>
-        <Box>Meaning</Box>
+
+        <Box className={css.meaning} tag="fieldset">
+          <Box tag="legend">Meaning</Box> {vocabWord.meaning}
+        </Box>
         <Box style={{ fontWeight: "300" }}>{vocabWord.description}</Box>
       </Flex>
     </Portal>

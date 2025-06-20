@@ -8,52 +8,36 @@ import { Wrapper, Content } from "@/common";
 import WordBox from "@/components/vocabularyWords/wordBox";
 import AZ from "@/components/a-z";
 import css from "@/css/vocabularyWords.module.css";
+import { type vocabWordType } from "@/types/vocabularyWords";
 
-
-type VocabWords = {
-  word: string;
-  description: string;
-  type: number;
-};
-type VocabWordList = VocabWords[];
-
-
+type VocabWordList = vocabWordType[];
 
 export default function Page() {
-
-
   const [words, setWords] = useState<VocabWordList>([]);
 
-  const {letter }: { letter: string } = useParams();
+  const { letter }: { letter: string } = useParams();
 
   const fetchData = async () => {
-
     console.log(letter);
 
-  const req = await fetch(`/api/fetchWords`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
-    body: `letter=${letter}`,
-  });
+    const req = await fetch(`/api/fetchWords`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `letter=${letter}`,
+    });
 
-  const res = await req.json();
+    const res = await req.json();
 
+    setWords(res);
+  };
 
-  setWords(res);
-  }
-
-  
-  useEffect (() => {
-
-  console.log(process.env.NEXT_PUBLIC_API_URL, 'env here');
+  useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_API_URL, "env here");
 
     fetchData();
-
-  }, [])
-
-
+  }, []);
 
   return (
     <React.Fragment>
@@ -61,21 +45,21 @@ export default function Page() {
         <Header />
         <Content>
           <Flex column mt={50}>
-
-   
             <AZ currLetter={letter} />
-           
-        
-            <HrLine mb={40} />
-         
-            <Box className={css.wordContainer} style={{ "--per-column": 3, tablet: { "--per-column": 2}, mobile: { "--per-column": 1 }}}>
-            {words.map((vocabWord, i) => (
-            <WordBox
-            key={vocabWord.word || i}
-            vocabWord={vocabWord}
-              />
-            ))}
 
+            <HrLine mb={40} />
+
+            <Box
+              className={css.wordContainer}
+              style={{
+                "--per-column": 3,
+                tablet: { "--per-column": 2 },
+                mobile: { "--per-column": 1 },
+              }}
+            >
+              {words.map((vocabWord, i) => (
+                <WordBox key={vocabWord.word || i} vocabWord={vocabWord} />
+              ))}
             </Box>
           </Flex>
         </Content>

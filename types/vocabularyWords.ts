@@ -1,5 +1,7 @@
 export type vocabWordType = {
   word: string;
   description: string;
-  type: number
-}
+  meaning: string;
+  sentence: string;
+  type: number;
+};

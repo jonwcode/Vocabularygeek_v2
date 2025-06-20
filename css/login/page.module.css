@@ -1,0 +1,6 @@
+.container {
+  box-shadow: var(--shadow-md);
+  background: var(--secondary-background);
+  padding: 20px;
+  border-radius: var(--radius-md);
+}
