@@ -1,0 +1,11 @@
+.button {
+  background: linear-gradient(
+    90deg,
+    var(--button-gradient-1) 0%,
+    var(--button-gradient-2) 43%
+  );
+  box-shadow: var(--shadow-sm);
+  padding: var(--button-padding-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}

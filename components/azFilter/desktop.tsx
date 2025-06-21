@@ -1,9 +1,9 @@
-'use client';
-import Link from 'next/link';
-import { Box, Flex } from '@/common';
-import css from '@/css/components/a-z.module.css';
-import ArrowAZ from '@/assets/svg/arrow-az.svg';
-import React, { useState, useEffect, useRef } from 'react';
+"use client";
+import Link from "next/link";
+import { Box, Flex } from "@/common";
+import css from "@/css/components/azFilter/desktop.module.css";
+import ArrowAZ from "@/assets/svg/arrow-az.svg";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function AZ({ currLetter }: { currLetter?: string }) {
   const [showLetter, setShowLetters] = useState(false);
@@ -40,7 +40,10 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
   }, [showLetter]);
   return (
     <React.Fragment>
-      <Flex className={css.model}>
+      <Flex
+        className={css.model}
+        style={{ mobile: { display: "none" }, tablet: { display: "none" } }}
+      >
         <Flex
           middle
           onMouseEnter={cancelTimeout}
@@ -52,10 +55,24 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
               onMouseEnter={() => setShowLetters(true)}
               className={css.azButton}
             >
-              <Box pr={10}> {!currLetter ? <Box style={{ width: '45px'}}>A - Z</Box> : <Box style={{ textTransform: 'uppercase', color: 'var(--primary-color)'}}>{currLetter}</Box> }</Box>{' '}
+              <Box pr={10}>
+                {" "}
+                {!currLetter ? (
+                  <Box style={{ width: "45px" }}>A - Z</Box>
+                ) : (
+                  <Box
+                    style={{
+                      textTransform: "uppercase",
+                      color: "var(--primary-color)",
+                    }}
+                  >
+                    {currLetter}
+                  </Box>
+                )}
+              </Box>{" "}
               <ArrowAZ
                 style={{
-                  color: 'var(--green-color-400)',
+                  color: "var(--green-color-400)",
                 }}
                 width="25px"
                 height="25px"

@@ -6,6 +6,8 @@ export default function Content({ children }: { children?: React.ReactNode }) {
       style={{
         marginTop: 50,
         paddingBottom: 10,
+        maxWidth: "95%",
+        margin: "auto",
       }}
     >
       {children}

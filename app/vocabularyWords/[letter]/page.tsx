@@ -6,7 +6,7 @@ import HrLine from "@/components/hrLine";
 import Header from "@/components/header";
 import { Wrapper, Content } from "@/common";
 import WordBox from "@/components/vocabularyWords/wordBox";
-import AZ from "@/components/a-z";
+import Filter from "@/components/filter";
 import css from "@/css/vocabularyWords.module.css";
 import { type vocabWordType } from "@/types/vocabularyWords";
 
@@ -45,7 +45,7 @@ export default function Page() {
         <Header />
         <Content>
           <Flex column mt={50}>
-            <AZ currLetter={letter} />
+            <Filter />
 
             <HrLine mb={40} />
 

@@ -1,5 +1,5 @@
-@import url('./theme/dark-theme.css');
-@import url('./theme/light-theme.css');
+@import url("./theme/dark-theme.css");
+@import url("./theme/light-theme.css");
 
 hr {
   background: rgba(210, 210, 210, 0.052);
@@ -7,31 +7,44 @@ hr {
 }
 
 @font-face {
-  font-family: 'WDXLLubrifontTC';
-  src: url('/assets/fonts/WDXLLubrifontTC-Regular.woff2') format('woff2'),
-    url('/assets/fonts/WDXLLubrifontTC-Regular.woff') format('woff');
+  font-family: "WDXLLubrifontTC";
+  src: url("/assets/fonts/WDXLLubrifontTC-Regular.woff2") format("woff2"),
+    url("/assets/fonts/WDXLLubrifontTC-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/Inter-Italic-VariableFont_opsz,wght.woff2'),
-    url('/assets/fonts/Inter-VariableFont_opsz,wght.woff2')
-      format('woff2-variations');
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-Italic-VariableFont_opsz,wght.woff2"),
+    url("/assets/fonts/Inter-VariableFont_opsz,wght.woff2")
+      format("woff2-variations");
   font-weight: 100 900; /* range supported by the font */
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/assets/fonts/Roboto-VariableFont_wdth,wght.woff2'),
-    url('/assets/fonts/Roboto-Italic-VariableFont_wdth,wght.woff2')
-      format('woff2-variations');
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-VariableFont_wdth,wght.woff2"),
+    url("/assets/fonts/Roboto-Italic-VariableFont_wdth,wght.woff2")
+      format("woff2-variations");
   font-weight: 100 900; /* range supported by the font */
   font-style: normal;
   font-display: swap;
+}
+
+:root {
+  --primary-fontSize: 1rem;
+}
+
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  :root {
+    --primary-fontSize: 0.9rem;
+  }
+}
+
+@media screen {
 }
 
 html,
@@ -40,6 +53,7 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+  font-size: var(--primary-fontSize);
 }
 
 a {
@@ -56,12 +70,12 @@ html {
 body {
   color: var(--primary-color);
   background: var(--primary-background);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.0538em;
-  font-variation-settings: 'wdth' 100;
+  font-variation-settings: "wdth" 100;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.2rem;

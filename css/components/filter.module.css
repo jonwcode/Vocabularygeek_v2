@@ -1,0 +1,7 @@
+.selectBox {
+  background: var(--secondary-background);
+  padding: var(--padding-md);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius-md);
+  width: 300px;
+}
