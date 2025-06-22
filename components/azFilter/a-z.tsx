@@ -9,7 +9,7 @@ export default function AZ() {
 
   return (
     <React.Fragment>
-      <Flex column>
+      <Flex style={{ width: "100%" }}>
         <Mobile />
         <Desktop />
       </Flex>

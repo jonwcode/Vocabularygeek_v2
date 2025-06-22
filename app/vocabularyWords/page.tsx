@@ -9,7 +9,7 @@ import css from "@/css/vocabularyWords.module.css";
 import { type vocabWordType } from "@/types/vocabularyWords";
 
 export default async function Page() {
-  const req = await fetch(`${process.env.API_URL}fetchWords`, {
+  const req = await fetch(`${process.env.API_URL}/fetchWords`, {
     method: "POST",
   });
 

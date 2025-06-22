@@ -5,17 +5,26 @@ import css from "@/css/components/filter.module.css";
 export default function Filter({ currLetter }: { currLetter?: string }) {
   return (
     <Flex middle fullWidth mb={10}>
-      <Flex middle style={{ color: "var(--lite-color-100)" }}>
+      <Flex
+        middle
+        style={{
+          color: "var(--lite-color-100)",
+          tablet: { width: "150px" },
+          whiteSpace: "nowrap",
+        }}
+        pr={5}
+      >
         <FilterSVG style={{ paddingRight: 5 }} />
-        Word Filters
+        <Box style={{ mobile: { display: "none" } }}>Word Filters</Box>
       </Flex>
-      <Flex ml={20} middle className={css.selectBox}>
-        <Flex style={{ width: "80%" }}>
-          <Box mr={20}>From A-Z</Box>
-        </Flex>
-        <Flex style={{ width: "30%" }}>
-          <AZ />
-        </Flex>
+      <Flex
+        style={{
+          width: "30%",
+          mobile: { width: "100%" },
+          tablet: { width: "100%" },
+        }}
+      >
+        <AZ />
       </Flex>
     </Flex>
   );

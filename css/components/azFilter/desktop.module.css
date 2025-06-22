@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap");
 .model {
   justify-content: center;
   font-size: 1.4rem;
   align-items: center;
   width: 100%;
-  margin-top: 40px;
 }
 .letterContainer {
   transform: translateY(-5px) translateX(-100%);
@@ -12,20 +11,21 @@
   transition-duration: 300ms;
   transition-property: opacity transform;
   transition-timing-function: ease-in-out;
-    overflow:hidden;
+  overflow: hidden;
   opacity: 0;
 }
 
 .letterContainer div {
   position: relative;
+  margin-top: 10px;
   margin-right: 20px;
-  font-family: 'WDXL Lubrifont SC', sans-serif;
+  font-family: "WDXL Lubrifont SC", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .letterContainer div:not(:first-child):after {
-  content: '';
+  content: "";
   width: 1px;
   height: 60%;
   background: var(--lite-color-100);
@@ -51,7 +51,7 @@
 .azButton {
   cursor: pointer;
   z-index: 3;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   font-size: 1.2rem;
   color: var(--lite-color-100);
   box-shadow: var(--shadow-sm);

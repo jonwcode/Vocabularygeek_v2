@@ -132,8 +132,8 @@ const Flex = forwardRef(function CustomTag<
     {
       ref,
       style: {
-        ...style,
         display: "flex",
+        ...style,
         ...(border && { border }),
         ...(fullWidth && { width: "100%" }),
         ...(column && { flexDirection: "column" }),

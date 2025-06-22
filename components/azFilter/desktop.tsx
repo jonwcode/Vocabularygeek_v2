@@ -41,16 +41,18 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
   return (
     <React.Fragment>
       <Flex
-        className={css.model}
+        middle
         style={{ mobile: { display: "none" }, tablet: { display: "none" } }}
       >
         <Flex
           middle
+          center
           onMouseEnter={cancelTimeout}
           onMouseLeave={() => setShowLetters(false)}
           className={css.azWrapper}
+          style={{ alignItems: "center" }}
         >
-          <Flex mb={10} middle className={css.btnContainer}>
+          <Flex middle className={css.btnContainer}>
             <Flex
               onMouseEnter={() => setShowLetters(true)}
               className={css.azButton}

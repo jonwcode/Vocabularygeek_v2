@@ -8,4 +8,26 @@
   padding: var(--button-padding-sm);
   border-radius: var(--radius-sm);
   cursor: pointer;
+  margin-left: 20px;
+}
+
+.selectBox {
+  background: var(--secondary-background);
+  padding: var(--padding-md);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius-md);
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropDownList {
+  border: 1px solid var(--borderColor);
+  padding: var(--padding-sm);
+  border-radius: var(--radius-sm);
+}
+
+.dropDownList ul {
+  list-style: none;
+  list-style-type: none;
 }
