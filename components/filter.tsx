@@ -4,7 +4,7 @@ import FilterSVG from "@/assets/svg/filter.svg";
 import css from "@/css/components/filter.module.css";
 export default function Filter({ currLetter }: { currLetter?: string }) {
   return (
-    <Flex middle fullWidth mb={10}>
+    <Flex style={{ zIndex: 25, position: "relative" }} middle fullWidth mb={10}>
       <Flex
         middle
         style={{
@@ -14,7 +14,7 @@ export default function Filter({ currLetter }: { currLetter?: string }) {
         }}
         pr={5}
       >
-        <FilterSVG style={{ paddingRight: 5 }} />
+        <FilterSVG />
         <Box style={{ mobile: { display: "none" } }}>Word Filters</Box>
       </Flex>
       <Flex

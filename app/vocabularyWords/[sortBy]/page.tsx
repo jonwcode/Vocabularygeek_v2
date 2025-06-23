@@ -15,11 +15,9 @@ type VocabWordList = vocabWordType[];
 export default function Page() {
   const [words, setWords] = useState<VocabWordList>([]);
 
-  const { letter }: { letter: string } = useParams();
+  const { sortBy: letter }: { sortBy: string } = useParams();
 
   const fetchData = async () => {
-    console.log(letter);
-
     const req = await fetch(`/api/fetchWords`, {
       method: "POST",
       headers: {

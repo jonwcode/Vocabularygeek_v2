@@ -21,13 +21,69 @@
   cursor: pointer;
 }
 
-.dropDownList {
+.dropDownMenu {
   border: 1px solid var(--borderColor);
   padding: var(--padding-sm);
   border-radius: var(--radius-sm);
 }
 
-.dropDownList ul {
+.dropDownMenu ul {
   list-style: none;
   list-style-type: none;
+}
+.dropDownMenu li {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.dropDownMenu {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  background: var(--secondary-background);
+  transform: translateY(100%) translateX(-50%);
+  width: 100%;
+  z-index: 6;
+}
+
+.dropDownMenu::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 10px 17.3px 10px;
+  border-color: transparent transparent var(--secondary-background) transparent;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2px);
+  transform: translateY(-100%);
+  z-index: 20;
+}
+
+.dropDownMenu::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 11px 20.9px 11px;
+  border-color: transparent transparent var(--borderColor) transparent;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2.8px);
+  transform: translateY(-100%);
+  z-index: 19;
+}
+
+.overlay {
+  background: var(--overlay-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 19;
+  backdrop-filter: blur(1px);
 }

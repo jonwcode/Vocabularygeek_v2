@@ -18,6 +18,7 @@
   --button-padding-sm: 5px;
   --button-gradient-1: var(--secondary-background);
   --button-gradient-2: #0b0b11;
+  --overlay-color: rgba(77, 77, 83, 0.176);
 
   --green-color-100: #8ebaa3;
   --green-color-200: #6bbf59;
