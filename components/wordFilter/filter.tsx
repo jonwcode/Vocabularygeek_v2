@@ -1,14 +1,16 @@
+"use client";
 import { Flex, Box } from "@/common";
-import AZ from "./azFilter/a-z";
+import Desktop from "@/components/wordFilter/desktop";
+import Mobile from "@/components/wordFilter/mobile";
 import FilterSVG from "@/assets/svg/filter.svg";
 import css from "@/css/components/filter.module.css";
-export default function Filter({ currLetter }: { currLetter?: string }) {
+export default function Filter({ sortBy }: { sortBy?: string }) {
   return (
     <Flex style={{ zIndex: 25, position: "relative" }} middle fullWidth mb={10}>
       <Flex
         middle
         style={{
-          color: "var(--lite-color-100)",
+          color: "var(--lite-color-300)",
           tablet: { width: "150px" },
           whiteSpace: "nowrap",
         }}
@@ -24,7 +26,8 @@ export default function Filter({ currLetter }: { currLetter?: string }) {
           tablet: { width: "100%" },
         }}
       >
-        <AZ />
+        <Desktop />
+        <Mobile />
       </Flex>
     </Flex>
   );

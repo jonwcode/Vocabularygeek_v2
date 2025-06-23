@@ -1,4 +1,4 @@
-[data-theme='light'] {
+[data-theme="light"] {
   --shadow-sm: 0 0px 6px var(--green-color-100);
   --shadow-md: 0 0px 12px var(--green-color-100);
   --radius-md: 10px;
@@ -10,12 +10,16 @@
   --primary-color: #000000;
 
   --borderColor: #efeeee;
+  --lite-borderColor: #d8d8d8;
   --secondary-borderColor: #dedede;
   --button-backgroundColor: var(--green-color-400);
   --button-padding-md: 10px;
   --button-padding-sm: 5px;
   --button-gradient-1: var(--secondary-background);
   --button-gradient-2: #f7f7f7;
+  --overlay-color: rgba(36, 36, 39, 0.176);
+  --checkmark-color: #6e6d75;
+  --scrollbar-color: #f4f4f4;
 
   /*  Not included in the dark theme */
   --secondary-color: #000000;
@@ -28,9 +32,11 @@
   --green-color-400: #0b6e4f;
   --green-color-500: #073b3a;
 
-  --lite-color-100: #282727;
-  --lite-color-200: #acacac;
-  --lite-color-300: #959595;
+  --lite-color-100: rgb(226, 226, 226);
+  --lite-color-200: rgb(204, 204, 204);
+  --lite-color-300: rgb(179, 179, 179);
+  --lite-color-400: rgb(163, 163, 163);
+  --lite-color-500: rgb(126, 126, 126);
 
   --logo-strokeColor: rgb(214, 214, 214);
   --logo-fillColor: #7a7a7a;

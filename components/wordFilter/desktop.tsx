@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Box, Flex } from "@/common";
-import css from "@/css/components/azFilter/desktop.module.css";
+import css from "@/css/components/wordFilter/desktop.module.css";
 import ArrowAZ from "@/assets/svg/arrow-az.svg";
 import React, { useState, useEffect, useRef } from "react";
 
@@ -57,10 +57,12 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
               onMouseEnter={() => setShowLetters(true)}
               className={css.azButton}
             >
-              <Box pr={10}>
-                {" "}
+              <Box
+                pr={10}
+                style={{ color: "var(--lite-color-400)", fontWeight: "bold" }}
+              >
                 {!currLetter ? (
-                  <Box style={{ width: "45px" }}>A - Z</Box>
+                  <Box style={{ width: "47px" }}>A - Z</Box>
                 ) : (
                   <Box
                     style={{
@@ -71,7 +73,7 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
                     {currLetter}
                   </Box>
                 )}
-              </Box>{" "}
+              </Box>
               <ArrowAZ
                 style={{
                   color: "var(--green-color-400)",

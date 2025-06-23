@@ -1,15 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Flex, Box } from "@/common";
 import UsePortal from "@/hooks/usePortal";
 import ArrowOutwardSVG from "@/assets/svg/arrowOutward.svg";
-import css from "@/css/components/azFilter/mobile.module.css";
-import DropDownArrow from "@/assets/svg/dropDownArrow.svg";
+import css from "@/css/components/wordFilter/mobile.module.css";
+import SelectCategory from "./selectCategory";
 
 export default function Mobile() {
-  const [showDropDown, setShowDropDown] = useState(false);
   const [showAZModel, setShowAZModel] = useState(false);
+  const AZRef = useRef<HTMLDivElement | null>(null);
   const Portal = UsePortal;
+
+  const closeAZModel = () => {
+    const handleClickOutSide = (evt: MouseEvent) => {
+      if (AZRef?.current && !AZRef.current?.contains(evt.target as Node)) {
+        setShowAZModel(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutSide);
+
+    return () => document.removeEventListener("click", handleClickOutSide);
+  };
+
+  useEffect(() => {
+    closeAZModel();
+  }, []);
+
   return (
     <Flex
       middle
@@ -20,58 +38,29 @@ export default function Mobile() {
         uhd: { display: "none" },
       }}
     >
-      <Flex center style={{ width: "100%" }}>
-        <Flex
-          onClick={() => setShowDropDown((prev) => !prev)}
-          style={{ width: "100%", position: "relative" }}
-          center
-          className={css.dropDownList}
-        >
-          <Box>All Words</Box>
+      <SelectCategory />
 
-          {/* Filter Word Drop Down */}
-          {showDropDown && (
-            <Flex column className={css.dropDownMenu}>
-              <ul>
-                <Portal>
-                  <Box className={css.overlay} />
-                </Portal>
-                <li>
-                  <Link href="/vocabularyWords/a-z">From A To Z</Link>
-                </li>
-                <li>
-                  <Link href="/vocabularyWords/z-a">From Z To A</Link>
-                </li>
-                <li>
-                  <Link href="/vocabularyWords/noun">Noun</Link>
-                </li>
-                <li>
-                  <Link href="/vocabularyWords/verb">Verb</Link>
-                </li>
-                <li>
-                  <Link href="/vocabularyWords/adjective">Adjective</Link>
-                </li>
-              </ul>
-            </Flex>
-          )}
-          <Flex style={{ position: "absolute", right: 0 }}>
-            <DropDownArrow />
-          </Flex>
-        </Flex>
-      </Flex>
-
+      {/*  
+          A-Z
+      */}
       <Flex>
         <Flex
-          onClick={() => setShowAZModel((prev) => !prev)}
+          ref={AZRef}
+          onClick={() => setShowAZModel(true)}
           className={css.button}
-          style={{ width: "64px" }}
+          style={{
+            width: "67px",
+            color: "var(--lite-color-400)",
+            fontWeight: "bold",
+          }}
           middle
         >
           A-Z <ArrowOutwardSVG style={{ fill: "var(--green-color-400)" }} />
         </Flex>
         {showAZModel && (
           <Portal>
-            <Flex className={css.azModel}>
+            <Box className={css.overlay} />
+            <Flex column className={css.azModel}>
               <ul>
                 <li>
                   <Link href="/vocabularyWords/a">A</Link>

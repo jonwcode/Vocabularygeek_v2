@@ -4,7 +4,7 @@ import HrLine from "@/components/hrLine";
 import Header from "@/components/header";
 import { Wrapper, Content } from "@/common";
 import WordBox from "../../components/vocabularyWords/wordBox";
-import Filter from "@/components/filter";
+import Filter from "@/components/wordFilter/filter";
 import css from "@/css/vocabularyWords.module.css";
 import { type vocabWordType } from "@/types/vocabularyWords";
 

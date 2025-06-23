@@ -12,6 +12,7 @@
   --secondary-background: rgb(17, 17, 22);
   --secondary-color: #a3a3a3;
   --borderColor: #0b0b11;
+  --lite-borderColor: #1b1b25;
   --secondary-borderColor: rgb(22, 21, 33);
   --button-backgroundColor: var(--green-color-400);
   --button-padding-md: 10px;
@@ -19,6 +20,8 @@
   --button-gradient-1: var(--secondary-background);
   --button-gradient-2: #0b0b11;
   --overlay-color: rgba(77, 77, 83, 0.176);
+  --checkmark-color: #303030;
+  --scrollbar-color: #303030;
 
   --green-color-100: #8ebaa3;
   --green-color-200: #6bbf59;

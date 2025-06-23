@@ -1,6 +1,11 @@
 @import url("./theme/dark-theme.css");
 @import url("./theme/light-theme.css");
 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
 hr {
   background: rgba(210, 210, 210, 0.052);
   border-color: rgb(158, 91, 91);
