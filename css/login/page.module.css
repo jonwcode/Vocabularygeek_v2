@@ -3,4 +3,35 @@
   background: var(--secondary-background);
   padding: 20px;
   border-radius: var(--radius-md);
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.logo a {
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.logo a:hover {
+  background: var(--dark-color-400);
+}
+
+.formInputs {
+  width: 80%;
+  margin: auto;
+}
+
+.formInputs input {
+  padding: 20px;
 }

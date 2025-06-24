@@ -7,7 +7,7 @@ import css from "@/css/components/header.module.css";
 export default function Headers() {
   return (
     <React.Fragment>
-      <Flex className={css.header} tag="header">
+      <Flex className={css.header} tag="header" mb={50}>
         {/* Left Header Starts */}
         <Flex style={{ width: "70%" }}>
           <Flex style={{ padding: 15 }}>

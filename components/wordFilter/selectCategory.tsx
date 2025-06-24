@@ -76,6 +76,7 @@ export default function SelectCategory({
             position: "absolute",
             borderRadius: "var(--radius-sm)",
             background: "var(--secondary-background)",
+            cursor: "pointer",
             left: 0,
           }}
           ref={dropDownRef}

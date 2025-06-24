@@ -14,6 +14,14 @@
     },
     {
       "folderPath": "vocabularygeek_v2/css/login/"
+    },
+    {
+      "folderPath": "vocabularygeek_v2/assets/",
+      "color": "foldercolorizer.color_eeeeee"
+    },
+    {
+      "folderPath": "vocabularygeek_v2/app/",
+      "color": "foldercolorizer.color_ffcc66"
     }
   ]
 }
