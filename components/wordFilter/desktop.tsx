@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Box, Flex } from "@/common";
 import css from "@/css/components/wordFilter/desktop.module.css";
 import ArrowAZ from "@/assets/svg/arrow-az.svg";
+import SelectCategory from "./selectCategory";
 import React, { useState, useEffect, useRef } from "react";
 
 export default function AZ({ currLetter }: { currLetter?: string }) {
@@ -27,17 +28,28 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
     );
   };
 
-  const cancelTimeout = () => {
+  useEffect(() => {
+    toggleLetterClasses();
+  }, [showLetter]);
+
+  const showLetters = () => {
     if (timeout.current) {
       clearTimeout(timeout.current);
     }
+
+    setShowLetters(true);
   };
 
-  useEffect(() => {
-    toggleLetterClasses();
+  const hideLetters = () => {
+    if (timeout.current) {
+      clearTimeout(timeout.current);
+    }
 
-    console.log(letterClasses);
-  }, [showLetter]);
+    timeout.current = setTimeout(() => {
+      setShowLetters(false);
+    }, 1200);
+  };
+
   return (
     <React.Fragment>
       <Flex
@@ -46,13 +58,11 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
       >
         <Flex
           middle
-          center
-          onMouseEnter={cancelTimeout}
           onMouseLeave={() => setShowLetters(false)}
           className={css.azWrapper}
           style={{ alignItems: "center" }}
         >
-          <Flex middle className={css.btnContainer}>
+          <Flex middle>
             <Flex
               onMouseEnter={() => setShowLetters(true)}
               className={css.azButton}
@@ -85,87 +95,98 @@ export default function AZ({ currLetter }: { currLetter?: string }) {
           </Flex>
 
           {/* Letter Container Starts */}
-          <Flex middle className={`${letterClasses}`}>
-            <Flex>
+          <ul onMouseEnter={showLetters} className={`${letterClasses}`}>
+            <li>
               <Link href="/vocabularyWords/a">A</Link>
-            </Flex>
-            <Flex>
+            </li>
+
+            <li>
               <Link href="/vocabularyWords/b">B</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/c">C</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/d">D</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/e">E</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/f">F</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/g">G</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/h">H</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/i">I</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/j">J</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/k">K</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/l">L</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/m">M</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/n">N</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/o">O</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/p">P</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/q">Q</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/r">R</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/s">S</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/t">T</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/u">U</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/v">V</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/w">W</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/x">X</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/y">Y</Link>
-            </Flex>
-            <Flex>
+            </li>
+            <li>
               <Link href="/vocabularyWords/z">Z</Link>
-            </Flex>
-          </Flex>
-          <Flex></Flex>
+            </li>
+          </ul>
+        </Flex>
+
+        <Flex
+          style={{
+            width: "600px",
+            marginLeft: 50,
+            position: "absolute",
+            right: 0,
+          }}
+        >
+          <SelectCategory />
         </Flex>
       </Flex>
     </React.Fragment>

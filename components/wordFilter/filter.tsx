@@ -17,7 +17,9 @@ export default function Filter({ sortBy }: { sortBy?: string }) {
         pr={5}
       >
         <FilterSVG />
-        <Box style={{ mobile: { display: "none" } }}>Word Filters</Box>
+        <Box style={{ mobile: { display: "none" }, marginRight: 20 }}>
+          Word Filters
+        </Box>
       </Flex>
       <Flex
         style={{

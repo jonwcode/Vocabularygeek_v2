@@ -74,6 +74,8 @@ export default function SelectCategory({
             textAlign: "center",
             lineHeight: "30px",
             position: "absolute",
+            borderRadius: "var(--radius-sm)",
+            background: "var(--secondary-background)",
             left: 0,
           }}
           ref={dropDownRef}

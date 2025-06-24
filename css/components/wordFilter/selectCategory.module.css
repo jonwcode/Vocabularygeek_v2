@@ -65,7 +65,7 @@
   position: absolute;
   top: 0;
   left: calc(50% - 2px);
-  transform: translateY(-100%);
+  transform: translateY(-100%) translateX(calc(-50% + 2px));
   z-index: 20;
 }
 
@@ -80,6 +80,6 @@
   position: absolute;
   top: 0;
   left: calc(50% - 2.8px);
-  transform: translateY(-100%);
+  transform: translateY(-100%) translateX(calc(-50% + 2.8px));
   z-index: 19;
 }

@@ -11,6 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="darkreader-lock"></meta>
       <body>
         <Provider>{children}</Provider>
       </body>
